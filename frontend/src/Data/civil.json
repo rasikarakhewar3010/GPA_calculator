@@ -1,0 +1,72 @@
+{
+    "department": "Civil Engineering",
+    "semesters": [
+      {
+        "semester": 3,
+        "courses": [
+          {"code": "BTBS301", "title": "Mathematics – III", "category": "BSC", "credits": 4},
+          {"code": "BTCVES302", "title": "Mechanics of Solids", "category": "ESC", "credits": 4},
+          {"code": "BTCVC303", "title": "Building Construction & Drawing", "category": "PCC", "credits": 3},
+          {"code": "BTCVC304", "title": "Hydraulics -I", "category": "PCC", "credits": 4},
+          {"code": "BTCVC305", "title": "Surveying", "category": "PCC", "credits": 3},
+          {"code": "BTHM306", "title": "Soft Skill Development", "category": "HSSMC", "credits": "Audit"},
+          {"code": "BTCVL307", "title": "Solid Mechanics Laboratory", "category": "LC", "credits": 1},
+          {"code": "BTCVL308", "title": "Hydraulics-I Laboratory", "category": "LC", "credits": 1},
+          {"code": "BTCVL309", "title": "Surveying Laboratory", "category": "LC", "credits": 1},
+          {"code": "BTES210P", "title": "Internship –I Evaluation", "category": "Internship", "credits": "Audit"}
+        ]
+      },
+      {
+        "semester": 4,
+        "courses": [
+          {"code": "BTCVC401", "title": "Building Planning and Drawing", "category": "PCC", "credits": 2},
+          {"code": "BTCVC402", "title": "Environmental Engineering", "category": "PCC", "credits": 2},
+          {"code": "BTCVC403", "title": "Structural Mechanics - I", "category": "PCC", "credits": 3},
+          {"code": "BTCVC404", "title": "Water Resources Engineering", "category": "PCC", "credits": 3},
+          {"code": "BTCVC405", "title": "Hydraulics - II", "category": "PCC", "credits": 3},
+          {"code": "BTCVC406", "title": "Engineering Geology", "category": "PCC", "credits": 3},
+          {"code": "BTCVL407", "title": "Building Planning and CAD Lab", "category": "LC", "credits": 1},
+          {"code": "BTCVL408", "title": "Environmental Engg. Lab", "category": "LC", "credits": 1},
+          {"code": "BTCVL409", "title": "HE-II Lab", "category": "LC", "credits": 1}
+        ]
+      },
+      {
+        "semester": 5,
+        "courses": [
+          {"code": "BTCVC501", "title": "Design of Steel Structures", "category": "PCC", "credits": 3},
+          {"code": "BTCVC502", "title": "Geotechnical Engineering", "category": "PCC", "credits": 4},
+          {"code": "BTCVC503", "title": "Structural Mechanics –II", "category": "PCC", "credits": 3},
+          {"code": "BTCVC504", "title": "Concrete Technology", "category": "PCC", "credits": 2},
+          {"code": "BTHM505", "title": "Project Management", "category": "HSSMC", "credits": 3}
+        ]
+      },
+      {
+        "semester": 6,
+        "courses": [
+          {"code": "BTCVC601", "title": "Design of RC Structures", "category": "PCC", "credits": 4},
+          {"code": "BTCVC602", "title": "Foundation Engineering", "category": "PCC", "credits": 4},
+          {"code": "BTCVC603", "title": "Transportation Engineering", "category": "PCC", "credits": 3},
+          {"code": "BTCVM609", "title": "Mini Project", "category": "Project", "credits": 1}
+        ]
+      },
+      {
+        "semester": 7,
+        "courses": [
+          {"code": "BTCVC701", "title": "Design of Reinforced & Prestressed Concrete Structures", "category": "Core", "credits": 4},
+          {"code": "BTCVC702", "title": "Infrastructure Engineering", "category": "Core", "credits": 3},
+          {"code": "BTCVC703", "title": "Construction Techniques", "category": "Core", "credits": 3},
+          {"code": "BTCVC704", "title": "Professional Practices", "category": "Core", "credits": 4},
+          {"code": "BTCVP711", "title": "Project Stage-I", "category": "Project", "credits": 3}
+        ]
+      },
+      {
+        "semester": 8,
+        "courses": [
+          {"code": "BTCVSS801A", "title": "Characterization of Construction Materials", "category": "Self-Study", "credits": 3},
+          {"code": "BTCVSS802A", "title": "Energy Efficiency Acoustics and Day Lighting in Building", "category": "Self-Study", "credits": 3},
+          {"code": "BTCVP803", "title": "Project Stage-II", "category": "Project", "credits": 12}
+        ]
+      }
+    ]
+  }
+  
