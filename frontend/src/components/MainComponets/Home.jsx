@@ -36,11 +36,12 @@ export default function Home() {
                             animation="blurInUp"
                             by="character"
                             className="text-white text-center font-semibold 
-                   text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+                   text-lg sm:text-xl md:text-2xl lg:text-4xl"
                         >
                             CGPA Calculator: Based on grades and credits
                         </TextAnimate>
                     </div>
+
 
                     <GreadesToGPA />
                 </div>

@@ -30,54 +30,54 @@ const cseData = {
             { subject: "Discrete Mathematics", credits: 4 },
             { subject: "Data Structures", credits: 4 },
             { subject: "Computer Architecture & Organization", credits: 4 },
-            { subject: "Elective I ", credits: 4 },
+            { subject: "Elective I", credits: 4 },
             { subject: "Data Structures & Object Oriented Programming Lab", credits: 2 },
             { subject: "Seminar I", credits: 2 },
             { subject: "Field Training / Internship", credits: "Audit" },
         ],
-"Semester IV": [
-        {"subject": "Design & Analysis of Algorithms", "credits": 4},
-        {"subject": "Operating Systems", "credits": 4},
-        {"subject": "Basic Human Rights", "credits": 3},
-        {"subject": "Probability and Statistics", "credits": 3},
-        {"subject": "Digital Logic Design & Microprocessors", "credits": 4},
-        {"subject": "Operating Systems & Python Programming Lab", "credits": 3},
-        {"subject": "Seminar II", "credits": 2},
-        {"subject": "Field Training / Internship", "credits": "Audit"}
-      ],
-      "Semester V": [
-        {"subject": "Database Systems", "credits": 4},
-        {"subject": "Theory of Computation", "credits": 4},
-        {"subject": "Software Engineering", "credits": 4},
-        {"subject": "Elective II", "credits": 3},
-        {"subject": "Elective III", "credits": 3},
-        {"subject": "Database Systems & Software Engineering Lab", "credits": 2},
-        {"subject": "Mini-project I", "credits": 2},
-        {"subject": "Field Training / Internship", "credits": "Audit"}
-      ],
-      "Semester VI": [
-        {"subject": "Compiler Design", "credits": 4},
-        {"subject": "Computer Networks", "credits": 4},
-        {"subject": "Machine Learning", "credits": 4},
-        {"subject": "Elective IV", "credits": 3},
-        {"subject": "Elective V", "credits": 3},
-        {"subject": "Competitive Programming & Machine Learning Lab", "credits": 3},
-        {"subject": "Mini-project II", "credits": 2},
-        {"subject": "Field Training / Internship", "credits": "Audit"}
-      ],
-      "Semester VII": [
-        {"subject": "Artificial Intelligence", "credits": 3},
-        {"subject": "Cloud Computing", "credits": 3},
-        {"subject": "Elective VI", "credits": 3},
-        {"subject": "Open Elective VII", "credits": 3},
-        {"subject": "Open Elective VIII", "credits": 3},
-        {"subject": "Artificial Intelligence & Cloud Computing Lab", "credits": 2},
-        {"subject": "Project Phase I", "credits": 2},
-        {"subject": "Field Training / Internship", "credits": "Audit"}
-      ],
-      "Semester VIII": [
-        {"subject": "Project Phase II (In-house) / Internship", "credits": 12}
-      ]
+        "Semester IV": [
+            { "subject": "Design & Analysis of Algorithms", "credits": 4 },
+            { "subject": "Operating Systems", "credits": 4 },
+            { "subject": "Basic Human Rights", "credits": 3 },
+            { "subject": "Probability and Statistics", "credits": 3 },
+            { "subject": "Digital Logic Design & Microprocessors", "credits": 3 },
+            { "subject": "Operating Systems & Python Programming Lab", "credits": 3 },
+            { "subject": "Seminar II", "credits": 2 },
+            { "subject": "Field Training / Internship", "credits": "Audit" }
+        ],
+        "Semester V": [
+            { "subject": "Database Systems", "credits": 4 },
+            { "subject": "Theory of Computation", "credits": 4 },
+            { "subject": "Software Engineering", "credits": 4 },
+            { "subject": "Elective II", "credits": 3 },
+            { "subject": "Elective III", "credits": 3 },
+            { "subject": "Database Systems & Software Engineering Lab", "credits": 2 },
+            { "subject": "Mini-project I", "credits": 2 },
+            { "subject": "Field Training / Internship", "credits": "Audit" }
+        ],
+        "Semester VI": [
+            { "subject": "Compiler Design", "credits": 4 },
+            { "subject": "Computer Networks", "credits": 4 },
+            { "subject": "Machine Learning", "credits": 4 },
+            { "subject": "Elective IV", "credits": 3 },
+            { "subject": "Elective V", "credits": 3 },
+            { "subject": "Competitive Programming & Machine Learning Lab", "credits": 3 },
+            { "subject": "Mini-project II", "credits": 2 },
+            { "subject": "Field Training / Internship", "credits": "Audit" }
+        ],
+        "Semester VII": [
+            { "subject": "Artificial Intelligence", "credits": 3 },
+            { "subject": "Cloud Computing", "credits": 3 },
+            { "subject": "Elective VI", "credits": 3 },
+            { "subject": "Open Elective VII", "credits": 3 },
+            { "subject": "Open Elective VIII", "credits": 3 },
+            { "subject": "Artificial Intelligence & Cloud Computing Lab", "credits": 2 },
+            { "subject": "Project Phase I", "credits": 2 },
+            { "subject": "Field Training / Internship", "credits": "Audit" }
+        ],
+        "Semester VIII": [
+            { "subject": "Project Phase II (In-house) / Internship", "credits": 12 }
+        ]
     },
 };
 
@@ -135,11 +135,13 @@ export default function CseSemGPA() {
 
     return (
         <div className="bg-black flex flex-col items-center justify-center min-h-screen p-6">
-                        <IconButton/>
+            <IconButton className="absolute top-4 right-4 z-50" />
             <div className=" z-10 relative w-full max-w-4xl p-8 bg-background rounded-xl shadow-lg">
-                <h1 className="text-center text-4xl font-bold text-white mb-8">
-                    CSE Semester GPA Calculator
+                <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8">
+                    CSE SGPA Calculator
                 </h1>
+
+                <div className="flex items-center justify-center">
                 <form onSubmit={calculateGPA} className="space-y-6">
                     <div className="flex justify-center mb-6">
                         <select
@@ -203,6 +205,7 @@ export default function CseSemGPA() {
                         </button>
                     </div>
                 </form>
+                </div>
 
                 {gpa !== null && (
                     <div className="mt-6 text-center text-xl font-bold text-white">
