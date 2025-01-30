@@ -19,7 +19,7 @@ export default function Home() {
     return (
         <div className="bg-black">
             <IconButton />
-           
+
             <>
                 <NavBar />
                 <div>
@@ -31,11 +31,17 @@ export default function Home() {
 
 
                 <div className="my-4 pt-4">
-                    <div >
-                        <TextAnimate animation="blurInUp" by="character" className="text-white  text-4xl font-semibold  text-center ">
-                            CGPA calulator: Based on graedes and credits
+                    <div>
+                        <TextAnimate
+                            animation="blurInUp"
+                            by="character"
+                            className="text-white text-center font-semibold 
+                   text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+                        >
+                            CGPA Calculator: Based on grades and credits
                         </TextAnimate>
                     </div>
+
                     <GreadesToGPA />
                 </div>
                 <Footer />

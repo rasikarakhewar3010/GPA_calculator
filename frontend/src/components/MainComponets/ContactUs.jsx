@@ -33,7 +33,7 @@ export default function ContactUs() {
         };
 
         try {
-            const response = await fetch("http://localhost:5000/api/feedback/submit", {
+            const response = await fetch("https://gpa-calculator-irt5.onrender.com/api/feedback/submit", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

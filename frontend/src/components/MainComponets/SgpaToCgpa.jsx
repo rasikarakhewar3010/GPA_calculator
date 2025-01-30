@@ -53,11 +53,13 @@ export default function SgpaToCgpa() {
     return (
         <div className="h-auto min-h-screen bg-black w-full p-6 md:p-10 shadow-xl">
             <IconButton />
-            <p className="z-10 text-center text-3xl sm:text-4xl font-medium tracking-tighter text-white">
+            <p className="z-10 text-center font-medium tracking-tighter text-white 
+               text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                 <TextAnimate animation="slideLeft" by="character">
                     SGPA TO CGPA
                 </TextAnimate>
             </p>
+
 
             <div className="flex justify-center mt-10 mx-4 sm:mx-10">
                 <form onSubmit={calculateCgpa} className="w-full max-w-lg">
