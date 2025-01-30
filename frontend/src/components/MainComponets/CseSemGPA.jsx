@@ -30,7 +30,7 @@ const cseData = {
             { subject: "Discrete Mathematics", credits: 4 },
             { subject: "Data Structures", credits: 4 },
             { subject: "Computer Architecture & Organization", credits: 4 },
-            { subject: "Elective I", credits: 4 },
+            { subject: "Elective I ", credits: 4 },
             { subject: "Data Structures & Object Oriented Programming Lab", credits: 2 },
             { subject: "Seminar I", credits: 2 },
             { subject: "Field Training / Internship", credits: "Audit" },
@@ -40,7 +40,7 @@ const cseData = {
         {"subject": "Operating Systems", "credits": 4},
         {"subject": "Basic Human Rights", "credits": 3},
         {"subject": "Probability and Statistics", "credits": 3},
-        {"subject": "Digital Logic Design & Microprocessors", "credits": 3},
+        {"subject": "Digital Logic Design & Microprocessors", "credits": 4},
         {"subject": "Operating Systems & Python Programming Lab", "credits": 3},
         {"subject": "Seminar II", "credits": 2},
         {"subject": "Field Training / Internship", "credits": "Audit"}

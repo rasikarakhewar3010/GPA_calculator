@@ -85,7 +85,7 @@ export default function MarksToSgpa() {
                     Marks to SGPA Calculator
                 </p>
                 <p className="text-white text-center mt-6 text-sm md:text-base">
-                    Note: This tool calculates approximate SGPA based on marks.
+                    Note: This tool calculates approximate SGPA based on marks. <br /> Try to open this page in Desktop or in Desktop mode
                 </p>
                 <div className="flex justify-center mt-8">
                     <form onSubmit={btnText === "Calculate SGPA >" ? calculateSGPA : resetForm} className="w-full">

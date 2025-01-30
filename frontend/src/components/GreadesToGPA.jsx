@@ -27,48 +27,49 @@ const gradePoints = {
 export default function GradesToGPA() {
   const [courses, setCourses] = useState([{ credits: "", grade: "" }]);
   const [sgpa, setSgpa] = useState(null);
-  const [btnText, setBtnText] = useState("Calculate SGPA >");
+  const [error, setError] = useState(null);
 
+  // ✅ Handle input changes without affecting calculation
   const handleInputChange = (index, field, value) => {
     const updatedCourses = [...courses];
     updatedCourses[index][field] = value;
     setCourses(updatedCourses);
   };
 
+  // ✅ Only adds a new course; does NOT trigger CGPA calculation
   const addCourse = () => {
     setCourses([...courses, { credits: "", grade: "" }]);
   };
 
-  const resetForm = () => {
-    setCourses([{ credits: "", grade: "" }]);
-    setSgpa(null);
-    setBtnText("Calculate SGPA >");
-  };
-
+  // ✅ Only runs when "Calculate SGPA" is clicked
   const calculateSGPA = (e) => {
     e.preventDefault();
+
     let totalCredits = 0;
     let totalGradePoints = 0;
-    let validInput = false;
+    let isValid = false;
 
-    courses.forEach((course) => {
+    for (const course of courses) {
       const credit = parseFloat(course.credits);
       const grade = course.grade;
       if (credit && grade) {
         totalCredits += credit;
         totalGradePoints += credit * gradePoints[grade];
-        validInput = true;
+        isValid = true; // At least one valid course exists
       }
-    });
+    }
 
-    if (!validInput || totalCredits === 0) {
-      setSgpa("Invalid input");
+    // If no valid inputs at all → show error
+    if (!isValid) {
+      setError("Please enter valid credits and select a grade for at least one course.");
+      setSgpa(null);
       return;
     }
 
+    // If valid → calculate SGPA
+    setError(null);
     const calculatedSGPA = totalGradePoints / totalCredits;
     setSgpa(calculatedSGPA.toFixed(2));
-    setBtnText("Reset");
   };
 
   return (
@@ -116,16 +117,29 @@ export default function GradesToGPA() {
             ))}
           </tbody>
         </table>
+
+        {/* Error message */}
+        {error && (
+          <div className="text-red-500 mt-4 text-center">{error}</div>
+        )}
+
+        {/* Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 w-full">
-          <button type="button" className="w-full sm:w-auto px-4 py-2" onClick={addCourse}>
+          <button
+            type="button" // Explicitly set type to "button" to prevent form submission
+            className="w-full sm:w-auto px-4 py-2"
+            onClick={addCourse}
+          >
             <InteractiveHoverButton>Add Course</InteractiveHoverButton>
           </button>
-          <button type="submit" className="w-full sm:w-auto px-4 py-2" onClick={btnText === "Reset" ? resetForm : calculateSGPA}>
-            <RainbowButton>{btnText}</RainbowButton>
+
+          <button type="submit" className="w-full sm:w-auto px-4 py-2">
+            <RainbowButton>Calculate SGPA</RainbowButton>
           </button>
         </div>
       </form>
-      {sgpa !== null && sgpa !== "Invalid input" && (
+
+      {sgpa !== null && !error && (
         <div className="mt-6 text-lg sm:text-xl font-bold text-white text-center">
           Your GPA: <span className="text-green-500">{sgpa}</span>
         </div>
